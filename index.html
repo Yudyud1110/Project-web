@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MyCompany</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#profile" class="nav-link">Our Profile</a></li>
+                <li><a href="#contact" class="nav-link">Message Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="banner" id="home">
+        <div class="banner-content">
+            <h1>Welcome to MyCompany</h1>
+            <p id="welcome-message">Hi <span id="user-name">Guest</span>!</p>
+        </div>
+    </header>
+    <section class="about" id="profile">
+        <h2>About the Company</h2>
+        <p>We are a creative company focused on delivering the best solutions for our clients. Our team is passionate, innovative, and dedicated to excellence.</p>
+        <h3>Vision & Mission</h3>
+        <ul>
+            <li>Vision: To be a leader in creative solutions worldwide.</li>
+            <li>Mission: Deliver innovative, reliable, and user-friendly products for our stakeholders.</li>
+        </ul>
+        <div class="photo-banner">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Company Banner">
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Message Us</h2>
+        <form id="contact-form" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error" id="phone-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="message-error"></span>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="form-result" class="form-result"></div>
+    </section>
+    <footer>
+        <p>&copy; 2025 MyCompany. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
