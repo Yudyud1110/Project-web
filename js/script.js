@@ -15,9 +15,20 @@ navLinks.forEach(link => {
     });
 });
 
-// Welcome message with name
+// Welcome pop-up and name handling
 const userNameSpan = document.getElementById('user-name');
 const nameInput = document.getElementById('name');
+
+window.addEventListener('DOMContentLoaded', function() {
+    let userName = '';
+    while (!userName) {
+        userName = prompt('Welcome! Please enter your name to continue:');
+        if (userName === null) userName = '';
+    }
+    if (userNameSpan) userNameSpan.textContent = userName;
+    if (nameInput) nameInput.value = userName;
+});
+
 if (nameInput) {
     nameInput.addEventListener('input', function() {
         userNameSpan.textContent = this.value || 'Guest';
